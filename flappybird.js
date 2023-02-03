@@ -1,3 +1,4 @@
+var body = document.getElementById("body");
 var game = document.getElementById("game");
 var hole = document.getElementById("hole");
 var result = document.getElementById("result");
@@ -36,7 +37,7 @@ var fall = setInterval(function () {
 }, 10);
 
 window.addEventListener("keydown", hop);
-
+body.addEventListener("click", hop);
 function hop() {
   jumping = 1;
   var birdTop = parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
